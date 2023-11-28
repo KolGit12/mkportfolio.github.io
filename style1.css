@@ -18,12 +18,26 @@ body{
     margin: 0;
     padding: 0;
     display: inline-block;
+    animation: Popup 1s;
 }
 #navbar{
     display: flex;
     align-items: right;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-end; /* Align items to the right */
+    animation: Popup 1.5s;
+}
+@keyframes Popup{
+    0%{
+        opacity: 0;
+        transform: scale(0%, 0%);
+    }
+    50%{
+        transform: scale(120%, 120%);
+    }
+    100%{
+        transform: scale(100%, 100%);
+    }
 }
 nav a{
     color: black;
@@ -40,6 +54,13 @@ nav a:hover{
 .main{
     display: flex;
     justify-content: center;
+}
+#block h2{
+    margin-bottom: 0;
+}
+hr{
+    border: 1.5px solid black;
+    border-radius: 100px;
 }
 #block{
     border-radius: 0.5em;
